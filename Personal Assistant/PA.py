@@ -1,0 +1,2 @@
+import CC
+CC.commandCentre()
