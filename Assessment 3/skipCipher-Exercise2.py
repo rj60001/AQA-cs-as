@@ -57,18 +57,11 @@ def skipDecrypt(s, n):
     return result
 
 def init():
-    choice = input("Hey! Welcome to Encrypt inc. Please type one of the relative commands: 'encrypt' - Encrypt a string. 'decrypt' - Decrypt a string.")
-    while True:
-        if choice == 'encrypt':
-            string = input('What is the string to be encrypted?')
-            skipNum = int(input('How many skips do you wish to perform?'))
-            result = skipEncrypt(string, skipNum)
-            print(result)
-        elif choice == 'decrypt':
-            string = input('What is the string to be decrypted?')
-            skipNum = int(input('How many skips do you wish to perform?'))
-            result = skipDecrypt(string, skipNum)
-            print(result)
-        choice = input("Please type one of the relative commands: 'encrypt' - Encrypt a string. 'decrypt' - Decrypt a string.")
+    string = 'hello'
+    skipNum = 2
+    result1 = skipEncrypt(string, skipNum)
+    print('Encrypted: '+result1)
+    result2 = skipDecrypt(result1, skipNum)
+    print('Decrypted: '+result2)
 
 init()
